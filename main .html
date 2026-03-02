@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,32 +6,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>voxaone</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-    <div>
-        <span>&#9776;</span>
-        <img src="logo.jpeg" alt="voxaOne Logo" width="36" />
-        <span>voxaOne</span>
+    <input type="checkbox" id="sidebar-Toggle" class="sidebar-Toggle">
+<header>
+    <div class="logo-menu" >
+
+        <div class="menu-bar">
+        <span class="menu"><i class="fa-solid fa-bars"></i> <label for="sidebar-Toggle"></label></span>
+
+       <div class="search-layout sidebar">
+
+        <div class="search-bar  search-br"> 
+
+        <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input type="text" name="search" class="search-input" id="search">
+     </div>
+
+  <nav class="menu-list">
+
+    <ul class="list-tab  sid">
+      <li class="lists"><a href="#">New Chat</a></li>
+      <li class="lists"><a href="#">Task</a></li>
+      <li class="lists"><a href="#">Image</a></li>
+      <li class="lists"><a href="#">History</a></li>
+      <li class="lists"><a href="#">Profile</a></li>
+      <li class="lists"><a href="#">Teams</a></li>
+    </ul>
+        <button class="logout">Log out</button>
+  </nav>
+
+    </div>
+      </div>
+
+        <div class="logo">
+        <img src="image/logo1.png" alt="voxaOne Logo" width="36" />
     </div>
 
-    <div>
+    </div>
+    </header>
+
+    
+
+<main class="choice-container">
+
+    <div class="choice-Layout">
         <h2>How can I help?</h2>
-        <div>
-            <button>Create Image</button>
-            <button>Discover</button>
-            <button>Ideas</button>
-            <button>&lt;/&gt; Code/Debug</button>
-        </div>
-    </div>
+        
 
-    <div>
-        <button>+</button>
-        <input type="text" placeholder="Ask ChatOne" />
+
+        <div class="choice-chose">
+            <button class="choice-pick">Create Image</button>
+            <button class="choice-pick">Discover</button>
+            <button class="choice-pick">Ideas</button>
+            <button class="choice-pick">&lt;/&gt; Code/Debug</button>
+        </div>
+
+    </div>
+</main>
+
+<main>
+    <section>
+    <div class="chat-Layout">
+        <button class="pic-Add"><i class="fa-solid fa-plus"></i></button>
+
+        <input type="text" class="chat-Area" placeholder="Ask ChatOne" />
+       
+       <button class="micro-btn"> <i class="fa-solid fa-microphone"></i></button>
+
+       <button class="send-btn"> <i class="fa-solid fa-paper-plane"></i></button>
         <button></button>
     </div>
-
+    </section>
+</main>
 </body>
 
 </html>
