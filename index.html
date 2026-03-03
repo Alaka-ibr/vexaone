@@ -17,7 +17,7 @@
     </div>
 
     <div class="welcome">
-      <h1>Let's Create...</h1>
+      <h2 id="typing-text">Let's Create...</h2>
     </div>
 
     <div class="login-options-container">
@@ -30,6 +30,51 @@
 
       <button>Log in</button>
     </div>
+
+
+    <script>
+
+      const textElement = document.getElementById("typing-text");
+    
+      const texts = [
+        "Let's Create...",
+        "Something Extraordinary.",
+        "Your Next Big Idea.",
+        "The Future Together."
+      ];
+    
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+    
+      function typeEffect() {
+        const currentText = texts[textIndex];
+        
+        if (!isDeleting) {
+     
+          textElement.textContent = currentText.substring(0, charIndex + 1);
+          charIndex++;
+    
+          if (charIndex === currentText.length) {
+            setTimeout(() => isDeleting = true, 1200); 
+          }
+        } else {
+        
+          textElement.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+    
+          if (charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+          }
+        }
+    
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(typeEffect, speed);
+      }
+    
+      typeEffect();
+    </script>
 
 </body>
 </html>

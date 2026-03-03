@@ -23,13 +23,27 @@ body {
 }
 
 .welcome {
-  margin: 22vh auto;
+  margin: 25vh auto;
   padding: auto;
   font-size: 0.7rem;
   font-weight: 300;
   color: #021b34;
 }
 
+#typing-text::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
 .login-options-container {
   display: flex;
   flex-direction: column;
